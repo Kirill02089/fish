@@ -31,6 +31,11 @@ set -gx PATH node_modules/.bin $PATH
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
+# dotnet
+set -gx DOTNET_ROOT $HOME/.dotnet
+set -gx PATH $HOME/.dotnet $PATH
+set -gx DOTNET_MULTILEVEL_LOOKUP 0
+
 # NVM
 function __check_rvm --on-variable PWD --description 'Do nvm stuff'
   status --is-command-substitution; and return
